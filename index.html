@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8e9bd">
+  <meta name="description" content="The Jamfolio — a little shop of ideas, experiments and everything in between.">
+  <title>The Jamfolio — A little shop of ideas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell" id="storefrontScene">
+    <header class="topline" aria-label="Portfolio introduction">
+      <a class="wordmark" href="./" aria-label="The Jamfolio home">The <span>Jam</span>folio</a>
+      <p class="topline-note">A little shop of ideas, experiments & everything in between.</p>
+    </header>
+
+    <section class="storefront-wrap" aria-label="The Jamfolio storefront">
+      <div class="storefront" id="storefront">
+        <img class="storefront-art" src="assets/backgrounds/storefront-empty-shell.png" alt="The Jamfolio storefront">
+        <div class="doorway-underlay" aria-hidden="true"></div>
+        <img class="storefront-door" id="storefrontDoor" src="assets/backgrounds/storefront-door-cutout.png" alt="">
+        <div class="window-message">
+          <span class="eyebrow">FRESHLY MADE IDEAS</span>
+          <h1>Welcome to<br><em>my little</em><br>corner shop.</h1>
+          <p>Curiosity, creativity & a spoonful of ambition.</p>
+        </div>
+        <button class="enter-button" id="enterButton" type="button">Come on in <span aria-hidden="true">↗</span></button>
+        <button class="door-hitarea" id="doorButton" type="button" aria-label="Open the shop door">
+          <span class="sr-only">Open the shop door</span>
+        </button>
+        <div class="door-hint" aria-hidden="true">Psst… the door is open <span>↓</span></div>
+      </div>
+      <p class="scene-caption">MADE WITH A LITTLE JAM & A LOT OF IMAGINATION</p>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 Subiksha Ramesh</span>
+      <span>Independent mind. Mixed with curiosity.</span>
+    </footer>
+  </main>
+
+  <main class="interior-scene" id="interiorScene" aria-label="Inside the Jamfolio shop" hidden>
+    <button class="back-to-storefront" id="backButton" type="button">← Back to the storefront</button>
+    <img class="stocked-shop-art" src="assets/backgrounds/jam-shop-interior.png" alt="The warmly stocked interior of the Jamfolio shop">
+    <section class="maker-intro" aria-label="About Subiksha">
+      <div class="maker-photo-wrap">
+        <img class="maker-photo" src="assets/portfolio/subiksha-portrait.jpg" alt="Subiksha standing in front of a rose installation">
+        <span class="photo-caption">the maker, in her element</span>
+      </div>
+      <div class="maker-copy">
+        <span class="eyebrow">A NOTE FROM THE MAKER</span>
+        <h1>Hi, I'm <em>Subiksha.</em></h1>
+        <p class="maker-lede">A multidisciplinary mind, drawn to the spaces where technology, business and creativity meet.</p>
+        <p>I'm curious about how ideas become experiences, products and businesses. I enjoy connecting dots, asking questions, shaping concepts and bringing people together to make things happen.</p>
+        <div class="maker-tags"><span>AI & technology</span><span>Business</span><span>Creative direction</span><span>Product thinking</span></div>
+        <p class="maker-current"><strong>Currently brewing:</strong> B.Tech CSE (AI/ML) at SRM · BBA DBE at IIM Bangalore · Rarekey Labs · Orvia</p>
+        <nav class="maker-links" aria-label="Contact and professional links">
+          <a href="mailto:subiksharamesh153@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/subiksha-ramesh-a48275335" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/SubikshaRK" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </nav>
+        <button class="explore-counter-button" id="exploreCounterButton" type="button">Explore the portfolio jars <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <main class="portfolio-scene" id="portfolioScene" aria-label="The JAMfolio counter" hidden>
+    <button class="back-to-shop" id="backToShopButton" type="button">← Back to the shop</button>
+    <img class="portfolio-shell" src="assets/backgrounds/portfolio-counter-bg.png" alt="">
+    <div class="counter-heading">
+      <span class="eyebrow">THE JAMFOLIO COUNTER</span>
+      <h2>Pick your <em>flavour.</em></h2>
+      <p>A little taste of everything that makes me, me.</p>
+    </div>
+
+    <div class="jar-station left-station" aria-label="Portfolio categories, left side">
+      <button class="jar-choice" type="button" data-category="education" aria-label="Strawberry — Education">
+        <img src="assets/jars/category/jar-strawberry-category.png" alt="">
+        <span>Education</span>
+      </button>
+      <button class="jar-choice" type="button" data-category="experience" aria-label="Blueberry — Experience">
+        <img src="assets/jars/category/jar-blueberry-category.png" alt="">
+        <span>Experience</span>
+      </button>
+      <button class="jar-choice" type="button" data-category="projects" aria-label="Marmalade — Projects">
+        <img src="assets/jars/category/jar-marmalade-category.png" alt="">
+        <span>Projects</span>
+      </button>
+    </div>
+
+    <div class="toast-stage">
+      <img class="giant-toast" src="assets/toast/giant-toast.png" alt="A large, freshly toasted slice of bread, ready for jam">
+      <img class="jam-spread" id="jamSpread" src="" alt="" aria-hidden="true">
+      <section class="toast-content" id="toastContent" aria-live="polite" aria-atomic="true" hidden>
+        <span class="toast-content-eyebrow" id="contentEyebrow"></span>
+        <h3 id="contentTitle"></h3>
+        <div class="toast-content-body" id="contentBody"></div>
+      </section>
+      <img class="resting-knife" src="assets/toast/butter-knife-clean.png" alt="A clean butter knife resting beside the toast">
+      <div class="toast-instruction">Choose a jar to get started</div>
+    </div>
+
+    <div class="jar-station right-station" aria-label="Portfolio categories, right side">
+      <button class="jar-choice" type="button" data-category="skills" aria-label="Raspberry — Skills & toolkit">
+        <img src="assets/jars/category/jar-raspberry-category.png" alt="">
+        <span>Skills</span>
+      </button>
+      <button class="jar-choice" type="button" data-category="achievements" aria-label="Apricot — Achievements">
+        <img src="assets/jars/category/jar-apricot-category.png" alt="">
+        <span>Achievements</span>
+      </button>
+      <button class="jar-choice" type="button" data-category="certifications" aria-label="Blackberry — Certifications">
+        <img src="assets/jars/category/jar-blackberry-category.png" alt="">
+        <span>Certifications</span>
+      </button>
+    </div>
+    <div class="collage-dimmer" id="collageDimmer" aria-hidden="true"></div>
+    <div class="portfolio-collage" id="portfolioCollage" aria-label="Selected portfolio scrapbook" hidden></div>
+    <p class="counter-footnote">SIX LITTLE JARS · SIX DIFFERENT SIDES OF ME</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
